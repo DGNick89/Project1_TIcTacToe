@@ -1,0 +1,75 @@
+* {
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    margin: 0  auto;
+    padding-bottom: 10px;
+    height: 50px;
+}
+
+
+body {
+    background-color: lightblue ;
+  
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+div {
+    height: 200px;
+}
+
+.playerX {
+    width: 50%;
+    text-align: center;
+    height: 500px;
+
+}
+.playerO {
+    width: 50%;
+    text-align: center;
+    height: 500px;
+}
+
+.game-board {
+    height: 600px;
+    width: 70%;
+    text-align: center;
+    height: 100%;
+}
+
+
+section {
+    width: 200px;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    font-size: 100px;
+    padding: 20px 20px 20px 20px;
+}
+
+footer{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.row-A {
+    border-bottom: 2px solid black;
+}
+
+.row-B {
+    border-bottom: 2px solid black;
+}
+
+.column-B {
+    border-right: 2px solid black ;
+    border-left: 2px solid black;
+}
