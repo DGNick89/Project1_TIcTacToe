@@ -57,6 +57,7 @@ function switchPlayers() {
 
 function playerTurn(event) {
     const audioElementWin = new Audio('./sound/futuristic-zoom-whoosh-2-183978.mp3')
+    const audioElementDraw = new Audio('./sound/classic-game-action-negative-9-224413.mp3')
     let elem = event.target
     if (hasWon === true) {
         return
@@ -144,6 +145,7 @@ function playerTurn(event) {
     if(counter>=9){
         playerXWins.textContent = 'DRAW!'
         playerOWins.textContent = 'DRAW!'
+        audioElementDraw.play()
     }
 
 }
