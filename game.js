@@ -27,6 +27,7 @@ let hasWon = false
 function startGame() {
     startBtn.style.display = 'none';
     document.querySelector('.game-board').style.display = 'inline'
+    playAgainBtn.style.display = 'inline'
 
 }
 
@@ -95,7 +96,7 @@ function playerTurn(event) {
         lineAC.classList.contains('X') &&
         lineBB.classList.contains('X') &&
         lineCA.classList.contains('X')) {
-        playerXWins.textContent = 'PLAYER X WINS';
+        playerXWins.textContent = 'PLAYER X WINS!';
         playerXscore.textContent++;
         hasWon = true
         return
@@ -126,7 +127,7 @@ function playerTurn(event) {
         lineAC.classList.contains('O') &&
         lineBB.classList.contains('O') &&
         lineCA.classList.contains('O')) {
-        playerOWins.textContent = 'PLAYER O WINS';
+        playerOWins.textContent = 'PLAYER O WINS!';
         playerOscore.textContent++;
         hasWon = true
         return
@@ -136,8 +137,8 @@ function playerTurn(event) {
     switchPlayers()
     counter++;
     if(counter>=9){
-        playerXWins.textContent = 'DRAW'
-        playerOWins.textContent = 'DRAW'
+        playerXWins.textContent = 'DRAW!'
+        playerOWins.textContent = 'DRAW!'
     }
 
 }
@@ -153,7 +154,7 @@ function playAgain() {
         if (sections[i].classList.contains('X') || sections[i].classList.contains('O') ) {
         sections[i].classList.remove('X') || sections[i].classList.remove('O')
     }
-}
+    }
 
 }
 
@@ -165,9 +166,7 @@ elem.addEventListener('click', playerTurn)
 }
 
 
-for (let i = 0; i < sections.length; i++) {    
-    // console.log(sections[i]);
-    
+for (let i = 0; i < sections.length; i++) {     
 playAgainBtn.addEventListener('click', playAgain)
 }
 
