@@ -7,7 +7,7 @@ Game Status: Displays the current game status (win, loss, or draw).
 
 ![image](https://github.com/user-attachments/assets/4c34f128-9bbe-47d7-aa2f-7a6ace05c876)
 
-## :computer: [Click here](#) to see my live project!
+## :rocket: [Click here](#) to see my live project!
 
 ## Getting Started
 ### Prerequisites
@@ -41,4 +41,4 @@ The game will automatically detect a win, loss, or draw and display a message.
 #### Contributing
 Feel free to fork the repository and submit pull requests with improvements or bug fixes.
 
-Nicolas
+:alien: Nicolas
