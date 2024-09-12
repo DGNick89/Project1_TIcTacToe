@@ -5,38 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>TIC TAC TOE</h1>
     </header>
-<main class="main">
-    <div class="playerX"> PLAYER 1</div>
-    <div class="game-board">
-        <div class="row-A">
-          <section class="column-A" id ="aa-elem"></section>
-          <section class="column-B" id ="ab-elem"></section>
-          <section id ="ac-elem"></section>
-          </div>
-        <div class="row-B">
-            <section class="column-A" id ="ba-elem" ></section>
-            <section class="column-B" id ="bb-elem" ></section>
-            <section id ="bc-elem" ></section>
+    <main class="main">
+        <div class="playerX"> PLAYER X
+            <div class="playerX-score">0
+            
+            </div>
+            <h2 class="playerXwins" >
+
+            </h2>
         </div>
-        <div class="row-C">
-            <section class="column-A" id ="ca-elem" ></section>
-            <section class="column-B" id ="cb-elem" ></section>
-            <section id ="cc-elem" ></section>
+        <button class="start-btn">START GAME</button>
+        <div class="game-board">
+            <div class="row-A">
+                <section class="column-A" id ="aa-elem"></section>
+                <section class="column-B" id ="ab-elem"></section>
+                <section id ="ac-elem"></section>
+            </div>
+             <div class="row-B">
+                <section class="column-A" id ="ba-elem" ></section>
+                <section class="column-B" id ="bb-elem" ></section>
+                <section id ="bc-elem" ></section>
+            </div>
+            <div class="row-C">
+                <section class="column-A" id ="ca-elem" ></section>
+                <section class="column-B" id ="cb-elem" ></section>
+                <section id ="cc-elem" ></section>
+            </div>
+        </div>    
+        <div class="playerO">PLAYER O
+        <div class="playerO-score">0
+        
         </div>
-    </div>    
-    <div class="playerO">PLAYER 2</div>
-</main>
+        <h2 class="playerOwins">
+
+        </h2>
+        </div>
+    </main>
 <footer>
     <button class="play-again-btn">PLAY AGAIN</button>
 </footer>
-
+<p>
 &copy 2024 Nick Enterprises
-
+</p>
 
 
 

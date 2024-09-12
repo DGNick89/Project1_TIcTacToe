@@ -1,20 +1,31 @@
 * {
-    /* border: 1px solid red; */
+    /* /* border: 1px solid red; */
     box-sizing: border-box;
 }
 
 header {
     text-align: center;
     margin: 0  auto;
-    padding-bottom: 10px;
-    height: 50px;
+    padding-bottom: 20px;
+    height: 100px;
+    color: yellow;
+    font-size: 40px;
+    text-shadow: 2px 2px 2px white ;
+    animation: fadeIn 5s;
 }
 
 
 body {
-    background-color: lightblue ;
-  
+    background: radial-gradient(#000000, #010c84); 
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 2px 2px 2px white ;
+    animation: fadeIn 5s;
 }
+  
+
 
 .main {
     display: flex;
@@ -29,22 +40,32 @@ div {
 }
 
 .playerX {
-    width: 50%;
+    width: 35%;
     text-align: center;
     height: 500px;
+    border-right: 5px solid white;
+    font-size: 30px;
+    color: chartreuse;
 
 }
 .playerO {
-    width: 50%;
+    width: 35%;
     text-align: center;
     height: 500px;
+    border-left: 5px solid white;
+    font-size: 30px;
+    color: chartreuse;
 }
 
 .game-board {
-    height: 600px;
-    width: 70%;
+    display: none;
     text-align: center;
     height: 100%;
+    padding: 25px 50px;
+    text-wrap: wrap;
+    color: lawngreen;
+    animation: fadeIn 5s;
+    
 }
 
 
@@ -57,20 +78,74 @@ section {
     padding: 20px 20px 20px 20px;
 }
 
-footer{
-    text-align: center;
-    margin-top: 50px;
-}
-
 .row-A {
-    border-bottom: 2px solid black;
+    border-bottom: 5px solid yellow;
+    box-shadow: 0 6px 2px -2px white;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
 }
 
 .row-B {
-    border-bottom: 2px solid black;
+    border-bottom: 5px solid yellow;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    box-shadow: 0 6px 2px -2px white;
 }
 
+.row-C {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+}
 .column-B {
-    border-right: 2px solid black ;
-    border-left: 2px solid black;
+    border-right: 5px solid yellow ;
+    border-left: 5px solid yellow;
+}
+
+p {
+    text-align: center;
+    color: yellow;
+}
+
+.playerX-score {
+    padding-top: 50px;
+}
+
+.playerO-score {
+    padding-top: 50px;
+}
+
+footer {
+    margin: 0 auto;
+    padding-top: 25px;
+    width: 80%;
+    border-top: 2px solid yellow; 
+    text-align: center;
+    color: yellow;
+   
+}
+
+.play-again-btn {
+   margin: 0 auto;
+   text-align: center;
+   color: rgb(5, 5, 5);
+   height: 50px;
+   width: 200px;
+   font-size: 25px;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  
+
+.start-btn {
+    display: inline;
+    font-size: 100px;
+    font-family: "Orbitron", sans-serif; 
+    color:chartreuse;
+    background-color: transparent;
+    text-shadow: 2px 2px 2px white ; 
+    box-shadow: 0 6px 6px white;
+
 }

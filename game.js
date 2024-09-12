@@ -12,20 +12,52 @@ const lineCA = document.getElementById('ca-elem')
 const lineCB = document.getElementById('cb-elem')
 const lineCC = document.getElementById('cc-elem')
 const columnA = document.querySelectorAll('.column-A')
+const startBtn = document.querySelector('.start-btn')
 let currentPlayer = 'X'
+let playerXscore = document.querySelector('.playerX-score')
+let playerOscore = document.querySelector('.playerO-score')
+let playerXWins = document.querySelector('.playerXwins')
+let playerOWins = document.querySelector('.playerOwins')
 let counter = 0;
+
+playerXscore.textContent = 0;
+playerOscore.textContent = 0;
+let hasWon = false
+
+function startGame() {
+    startBtn.style.display = 'none';
+    document.querySelector('.game-board').style.display = 'inline'
+
+}
+
 
 function switchPlayers() {
 
+    
     if (currentPlayer === 'X') {
         currentPlayer = 'O'
     } else {
         currentPlayer = 'X'
+       
     }
+
+    if (currentPlayer === 'X') {
+        document.querySelector('.playerX').style.borderRight = "5px solid red";
+        document.querySelector('.playerO').style.borderLeft = "5px solid white";
+    } else if (currentPlayer === 'O') {
+        document.querySelector('.playerX').style.borderRight = "5px solid white";
+        document.querySelector('.playerO').style.borderLeft = "5px solid red"
+    }
+
+
 }
 
 function playerTurn(event) {
     let elem = event.target
+    if (hasWon === true) {
+        return
+    }
+
     if (elem.textContent === 'X' || elem.textContent === "O") {
         return
     }
@@ -37,7 +69,7 @@ function playerTurn(event) {
     } else if (elem.textContent === 'O') {
         elem.classList.add('O')
     }
-   
+
 
     if (lineAA.classList.contains('X') && 
         lineAB.classList.contains('X') && 
@@ -63,8 +95,12 @@ function playerTurn(event) {
         lineAC.classList.contains('X') &&
         lineBB.classList.contains('X') &&
         lineCA.classList.contains('X')) {
-        alert(`PLAYER X WINS!`)
-        return;
+        playerXWins.textContent = 'PLAYER X WINS';
+        playerXscore.textContent++;
+        hasWon = true
+        return
+             
+       
     } else if (
         lineAA.classList.contains('O') && 
         lineAB.classList.contains('O') && 
@@ -90,20 +126,28 @@ function playerTurn(event) {
         lineAC.classList.contains('O') &&
         lineBB.classList.contains('O') &&
         lineCA.classList.contains('O')) {
-        alert(`PLAYER O WINS!`)
-        return;
+        playerOWins.textContent = 'PLAYER O WINS';
+        playerOscore.textContent++;
+        hasWon = true
+        return
+        
     }
+
     switchPlayers()
     counter++;
     if(counter>=9){
-        alert(`DRAW. TRY AGAIN!`)
+        playerXWins.textContent = 'DRAW'
+        playerOWins.textContent = 'DRAW'
     }
 
 }
 
 
 function playAgain() {
+    hasWon = false
     counter = 0;
+    playerXWins.textContent = "";
+    playerOWins.textContent = "";
     for (let i = 0; i < sections.length; i++) {     
     sections[i].textContent = ''
         if (sections[i].classList.contains('X') || sections[i].classList.contains('O') ) {
@@ -112,6 +156,9 @@ function playAgain() {
 }
 
 }
+
+startBtn.addEventListener('click', startGame)
+
 for(let elem of sections ) {
 elem.addEventListener('click', playerTurn)
 
@@ -123,6 +170,5 @@ for (let i = 0; i < sections.length; i++) {
     
 playAgainBtn.addEventListener('click', playAgain)
 }
-
 
 
