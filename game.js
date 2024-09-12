@@ -25,12 +25,14 @@ playerOscore.textContent = 0;
 let hasWon = false
 
 function startGame() {
+    const audioElement = new Audio('./sound/futuristic-noises-236386.mp3');
+    audioElement.play()
     startBtn.style.display = 'none';
     document.querySelector('.game-board').style.display = 'inline'
     playAgainBtn.style.display = 'inline'
 
 }
-
+ 
 
 function switchPlayers() {
 
@@ -54,6 +56,7 @@ function switchPlayers() {
 }
 
 function playerTurn(event) {
+    const audioElementWin = new Audio('./sound/futuristic-zoom-whoosh-2-183978.mp3')
     let elem = event.target
     if (hasWon === true) {
         return
@@ -99,6 +102,7 @@ function playerTurn(event) {
         playerXWins.textContent = 'PLAYER X WINS!';
         playerXscore.textContent++;
         hasWon = true
+        audioElementWin.play()
         return
              
        
@@ -130,6 +134,7 @@ function playerTurn(event) {
         playerOWins.textContent = 'PLAYER O WINS!';
         playerOscore.textContent++;
         hasWon = true
+        audioElementWin.play()
         return
         
     }
@@ -157,6 +162,7 @@ function playAgain() {
     }
 
 }
+
 
 startBtn.addEventListener('click', startGame)
 
