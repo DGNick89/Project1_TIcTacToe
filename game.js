@@ -11,7 +11,6 @@ const lineBC = document.getElementById('bc-elem')
 const lineCA = document.getElementById('ca-elem')
 const lineCB = document.getElementById('cb-elem')
 const lineCC = document.getElementById('cc-elem')
-const columnA = document.querySelectorAll('.column-A')
 const startBtn = document.querySelector('.start-btn')
 let currentPlayer = 'X'
 let playerXscore = document.querySelector('.playerX-score')
@@ -173,9 +172,7 @@ elem.addEventListener('click', playerTurn)
 
 }
 
-
-for (let i = 0; i < sections.length; i++) {     
 playAgainBtn.addEventListener('click', playAgain)
-}
+
 
 
