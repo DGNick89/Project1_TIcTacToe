@@ -6,7 +6,7 @@ Simple UI: Intuitive interface with a 3x3 grid.
 Game Status: Displays the current game status (win, loss, or draw).
 
 ![image](https://github.com/user-attachments/assets/4c34f128-9bbe-47d7-aa2f-7a6ace05c876)
-)
+
 ## :rocket: [Click Here](https://dgnick89.github.io/Project1_TIcTacToe/) to see my live project!
 
 ## Getting Started
