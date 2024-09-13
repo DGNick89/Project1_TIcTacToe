@@ -117,20 +117,24 @@ footer {
     margin: 0 auto;
     padding-top: 25px;
     width: 80%;
-    border-top: 2px solid yellow; 
+    border-top: 2px solid yellow;
     text-align: center;
     color: yellow;
+    display: none;
    
 }
 
 .play-again-btn {
    margin: 0 auto;
    text-align: center;
-   color: rgb(5, 5, 5);
    height: 50px;
    width: 200px;
    font-size: 25px;
    display: none;
+   font-family: "Orbitron", sans-serif; 
+   color:chartreuse;
+   background-color: transparent;
+   text-shadow: 2px 2px 2px white ; 
 }
 @keyframes fadeIn {
     0% { opacity: 0; }

@@ -29,7 +29,7 @@ function startGame() {
     startBtn.style.display = 'none';
     document.querySelector('.game-board').style.display = 'inline'
     playAgainBtn.style.display = 'inline'
-
+    document.querySelector('footer').style.display = 'block'
 }
  
 
