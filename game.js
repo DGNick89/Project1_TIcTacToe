@@ -28,7 +28,6 @@ function startGame() {
     audioElement.play()
     startBtn.style.display = 'none';
     document.querySelector('.game-board').style.display = 'inline'
-    playAgainBtn.style.display = 'inline'
     document.querySelector('footer').style.display = 'block'
 }
  
@@ -103,6 +102,8 @@ function playerTurn(event) {
         playerXscore.textContent++;
         hasWon = true
         audioElementWin.play()
+        playAgainBtn.style.display = 'inline'
+        playAgainBtn.style.animation = 'fadeIn 3s'
         return
              
        
@@ -135,6 +136,8 @@ function playerTurn(event) {
         playerOscore.textContent++;
         hasWon = true
         audioElementWin.play()
+        playAgainBtn.style.display = 'inline'
+        playAgainBtn.style.animation = 'fadeIn 3s'
         return
         
     }
@@ -144,6 +147,8 @@ function playerTurn(event) {
     if(counter>=9){
         playerXWins.textContent = 'DRAW!'
         playerOWins.textContent = 'DRAW!'
+        playAgainBtn.style.display = 'inline'
+        playAgainBtn.style.animation = 'fadeIn 3s'
         audioElementDraw.play()
     }
 
@@ -155,6 +160,7 @@ function playAgain() {
     counter = 0;
     playerXWins.textContent = "";
     playerOWins.textContent = "";
+    playAgainBtn.style.display = 'none'
     for (let i = 0; i < sections.length; i++) {     
     sections[i].textContent = ''
         if (sections[i].classList.contains('X') || sections[i].classList.contains('O') ) {

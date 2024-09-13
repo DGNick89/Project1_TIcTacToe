@@ -1,5 +1,4 @@
 * {
-    /* /* border: 1px solid red; */
     box-sizing: border-box;
 }
 
@@ -46,8 +45,8 @@ div {
     border-right: 5px solid white;
     font-size: 30px;
     color: chartreuse;
-
 }
+
 .playerO {
     width: 35%;
     text-align: center;
@@ -121,7 +120,8 @@ footer {
     text-align: center;
     color: yellow;
     display: none;
-   
+    box-shadow: 0 -6px 2px -2px white;
+    animation: fadeIn 5s;
 }
 
 .play-again-btn {
@@ -136,12 +136,6 @@ footer {
    background-color: transparent;
    text-shadow: 2px 2px 2px white ; 
 }
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
-  
 
 .start-btn {
     display: inline;
@@ -151,5 +145,9 @@ footer {
     background-color: transparent;
     text-shadow: 2px 2px 2px white ; 
     box-shadow: 0 6px 6px white;
-
 }
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
